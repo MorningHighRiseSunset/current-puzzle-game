@@ -1,4 +1,4 @@
-# Scrabble (Multiplayer)
+# Puzzle (Multiplayer)
 ## 2020/21 L4 Application Programming coursework
 
 SEE BELOW FOR CONFIGURATION GUIDE
