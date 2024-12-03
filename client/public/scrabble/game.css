@@ -1,0 +1,232 @@
+piece {
+    display: flex;
+    position: absolute;
+    cursor: move;
+    background: linear-gradient(145deg, #b4d5e5, #8ab8d1);
+    box-shadow: 4px 4px 8px #729ab1,
+                -2px -2px 6px #d6e9f3;
+    border: 1px solid #5d8ba6;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    width: 80px;
+    height: 80px;
+    border-radius: 4px;
+}
+
+nopiece {
+    display: flex;
+    position: absolute;
+    cursor: pointer;
+    background: none;
+    width: 80px;
+    height: 80px;
+}
+
+score {
+    display: inline-block;
+    position: absolute;
+    text-align: right;
+    right: 5px;
+    font-size: 50%;
+    width: 100%;
+    height: 100%;
+    color: #2c4d61;
+}
+
+.small-piece {
+    width: 40px;
+    height: 40px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+#container {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #f5f9fc;
+}
+
+#game-info-left {
+    position: relative;
+    border: 1px solid #a8c5d7;
+    display: flex;
+    flex-basis: 25%;
+    flex-grow: 1;
+    order: -1;
+    flex-direction: column;
+    height: 600px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#logo {
+    border-bottom: 1px solid #a8c5d7;
+    width: 100%;
+    background-color: #f5f9fc;
+}
+
+#game-chat {
+    border: none;
+    box-sizing: border-box;
+    resize: none; 
+    width: 100%;
+    flex-grow: 5;
+    background-color: white;
+    padding: 10px;
+}
+
+#game-info-right {
+    position: relative;
+    border: 1px solid #a8c5d7;
+    display: flex;
+    flex-basis: 25%;
+    flex-grow: 1;
+    order: 1;
+    flex-direction: column;
+    height: 600px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#player-scores {
+    border-bottom: 1px solid #a8c5d7;
+    display: flex;
+    flex-direction: row;
+    background-color: #f5f9fc;
+}
+
+.player {
+    border-right: 1px solid #a8c5d7;
+    justify-content: center;
+    text-align: center;
+    flex-grow: 2;
+    padding: 10px;
+    color: #2c4d61;
+}
+
+.myturn {
+    background-color: #b4d5e5;
+}
+
+.myturnprocessing {
+    background-color: #e57f7f;
+}
+
+.theirturn {
+    background-color: #8ab8d1;
+}
+
+#game-controls {
+    border-top: 1px solid #a8c5d7;
+    height: 5%;
+    display: flex;
+    flex-direction: row;
+}
+
+.game-control {
+    background-color: #5d8ba6;
+    color: white;
+    flex-grow: 2;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.game-control:hover {
+    background-color: #436d86;
+}
+
+#moves {
+    border-top: 1px solid #a8c5d7;
+    padding-left: 1vw;
+    padding-top: 1vh;
+    height: fit-content;
+    background-color: white;
+}
+
+.move {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #2c4d61;
+    padding: 5px 0;
+}
+
+#game-container {
+    border: 1px solid #a8c5d7;
+    position: static;
+    display: flex;
+    order: 0;
+    width: 600px;
+    height: 100%;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#game-info-compact {
+    border: 1px solid #a8c5d7;
+    top: 710px;
+    width: 600px;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#player-scores-compact {
+    border-right: 1px solid #a8c5d7;
+    display: flex;
+}
+
+#game-board {
+    outline: 2px solid #5d8ba6;
+    display: table;
+    table-layout: fixed;
+    width: 600px;
+    height: 600px;
+    text-align: center;
+    background-color: white;
+}
+
+.game-board-row {
+    display: table-row;
+    height: 40px;
+}
+
+.game-board-cell {
+    outline: 1px solid #a8c5d7;
+    display: table-cell;
+    width: 40px;
+    height: 40px;
+    font-size: 17px;
+    vertical-align: middle;
+    background: radial-gradient(circle, rgba(255,255,255,1) 38%, rgba(244,244,244,1) 94%);
+}
+
+.tripple-word {
+    background: radial-gradient(circle, rgba(45,98,145,1) 32%, rgba(31,74,115,1) 84%);
+    color: white;
+}
+
+.quadruple-word {
+    background: radial-gradient(circle, rgba(25,78,125,1) 32%, rgba(11,54,95,1) 84%);
+    color: white;
+}
+
+.tripple-letter {
+    background: radial-gradient(circle, rgba(109,157,197,1) 32%, rgba(72,126,173,1) 84%);
+    color: white;
+}
+
+.quadruple-letter {
+    background: radial-gradient(circle, rgba(79,127,167,1) 32%, rgba(42,96,143,1) 84%);
+    color: white;
+}
+
+.center-star {
+    background: radial-gradient(circle, rgba(255,226,132,1) 32%, rgba(249,202,91,1) 84%);
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="./main.css">
+        
+        <title>Puzzle! online</title>
+    </head>
+    <body>
+        <script src="locale.js"></script>
+
+        <div id="lang">
+            <a href="javascript:void(0);" onclick="switchLocale('en');">English</a> |
+            <a href="javascript:void(0);" onclick="switchLocale('es');" hreflang="es" lang="es">Español</a> |
+        </div>
+      
+
+        <div id="content">
+            <h1>PUZZLE</h1>
+
+            <form id="input-username">
+                <label for="input-text-username"><script>document.write(localeString('username'))</script>: </label>
+                <input id="input-text-username" type="text">
+                <button type="submit"><script>document.write(localeString('button-submit'))</script></button>
+            </form>
+    
+            <div id="connection-state"></div>
+    
+            <p><p>
+        </div>
+
+        <script src="index.js"></script>
+    </body>
+</html>

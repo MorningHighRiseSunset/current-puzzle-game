@@ -1,0 +1,23 @@
+textarea {
+    resize: none;
+}
+
+#log-console {
+    box-sizing: border-box;
+    width: 100%;
+    position: fixed;
+    bottom: 20pt;
+}
+
+#log-console-message {
+    width: 92%;
+    position: fixed;
+    bottom: 2pt;
+}
+
+#log-console-button {
+    width: 6%;
+    position: fixed;
+    bottom: 2pt;
+    right: 2pt;
+}

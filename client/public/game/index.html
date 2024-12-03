@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <script src="https://cdn.socket.io/socket.io-3.0.1.min.js"></script>
+
+        <link rel="stylesheet" href="../main.css">
+        <link rel="stylesheet" href="./lobby.css">
+
+        <title>Lobby</title>
+    </head>
+    <body>
+        <script src="../locale.js"></script>
+
+        <h1><script>document.write(localeString('game-lobby'))</script></h1>
+
+        <!--TODO: Should have a disconnect button-->
+
+        <div id="connection-state"></div>
+        <p>
+            
+
+        <div id="lobbies" style="display:none">
+            <script>
+                document.write(`
+                <input type="button" value="${localeString('lobby-create')}" onclick="showCreateLobby()">
+                <input type="button" value="${localeString('lobby-join')}" onclick="showJoinLobby()">
+                `);
+            </script>
+            <p><p>
+
+            <!-- <table border="1">
+                <tr><td>Host</td><td>Name</td><td>Players</td><td>Spectators</td></tr>
+                <tr><td>Ben</td><td>Cool Lobby</td><td>1/2</td><td>2</td><td><input type="button" value="join"></td><td><input type="button" value="spectate"></td></tr>
+                <tr><td>Ines</td><td>bruh Lobby</td><td>2/2</td><td>5</td><td><input type="button" value="join" disabled></td><td><input type="button" value="spectate"></td></tr>
+                <tr><td>test</td><td>Test LOL Lobby</td><td>2/2</td><td>25</td><td><input type="button" value="join" disabled></td><td><input type="button" value="spectate"></td></tr>
+            </table>
+
+            <p><p>
+
+            <div id="lobby-pageinator"> 
+                page 
+                <div id="lobby-page-number" style="display: inline-block;">1</div>
+                 out of 
+                <div id="lobby-page-ammount" style="display: inline-block;">1</div>
+                <input type="button" value="previous page (3)" onclick="previousPageOfLobbies()">
+                <input type="button" value="next page (3)" onclick="nextPageOfLobbies()">
+            </div> -->
+        </div>
+
+
+        <div id="lobby-create" style="display:none">
+            <h3><script>document.write(localeString('lobby-create'))</script></h3>
+            <script>
+                document.write(`<input type="text" id="lobby-input-name" placeholder="${localeString('name')}">`);
+            </script>
+            <p>
+            <input type="checkbox" id="lobby-input-private"> <script>document.write(localeString('lobby-private'))</script>
+            <p>
+            <input type="checkbox" id="lobby-input-spectators"> <script>document.write(localeString('lobby-allow-spectators'))</script>
+            <p>
+            <script>
+                document.write(`
+                <input type="button" value="${localeString('button-create')}" onclick="createLobby()">
+                <input type="button" value="${localeString('button-back')}" onclick="showBack()">
+                `);
+            </script>
+        </div>
+
+
+        <div id="lobby-join" style="display:none">
+            <h3><script>document.write(localeString('lobby-join'))</script></h3>
+            <script>
+                document.write(`<input type="text" id="lobby-input-join-id" placeholder="${localeString('lobby-code')}">`);
+            </script>
+            <p>
+            <input type="checkbox" id="lobby-input-join-spectator"> <script>document.write(localeString('lobby-join-spectator'))</script>
+            <p>
+            <script>
+                document.write(`
+                <input type="button" value="${localeString('button-join')}" onclick="joinLobby()">
+                <input type="button" value="${localeString('button-back')}" onclick="showBack()">
+                `);
+            </script>
+        </div>
+
+        <div id="lobby-active" style="display:none">
+            <!--Generated in code-->
+        </div>
+
+
+        <div id="console">
+            <script>
+                document.write(`
+                <textarea id="log-console" rows="10" cols=auto placeholder="${localeString('log-console')}" disabled></textarea>
+                `);
+            </script>
+        </div>
+
+        <script src="index.js"></script>
+        <script src="init.js"></script>
+        <script src="lobbies.js"></script>
+    </body>
+</html>
